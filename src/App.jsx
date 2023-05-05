@@ -1,6 +1,7 @@
 import DisplayingData from "./components/DisplayingData";
 import RenderingList from "./components/RenderingList";
 import RespondingEvents from "./components/RespondingEvents";
+import UpdateScreen from "./components/UpdateScreen";
 
 const App = () => {
   return (
@@ -8,6 +9,8 @@ const App = () => {
       <DisplayingData />
       <RenderingList />
       <RespondingEvents />
+      <UpdateScreen />
+      <UpdateScreen />
     </>
   );
 };
