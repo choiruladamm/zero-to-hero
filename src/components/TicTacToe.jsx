@@ -1,11 +1,8 @@
-/* eslint-disable react/prop-types */
-
 import { useState } from "react";
 
 export const TicTacToe = () => {
   return (
     <div style={{ marginTop: "1rem" }}>
-      <h1>Tic Tac Toe </h1>
       <Board />
     </div>
   );
