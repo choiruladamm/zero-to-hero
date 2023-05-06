@@ -1,16 +1,48 @@
+/* eslint-disable react/prop-types */
+
+import { useState } from "react";
+
 export const TicTacToe = () => {
   return (
     <div style={{ marginTop: "1rem" }}>
       <h1>Tic Tac Toe </h1>
-      <Square />
+      <Board />
     </div>
   );
 };
 
-export const Square = () => {
+export const Board = () => {
   return (
-    <button className="square">
-      X
+    <>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </>
+  );
+};
+
+export const Square = () => {
+  const [value, setValue] = useState(null);
+
+  const handleClick = () => {
+    setValue("X");
+  };
+
+  return (
+    <button className="square" onClick={handleClick}>
+      {value}
     </button>
   );
 };
