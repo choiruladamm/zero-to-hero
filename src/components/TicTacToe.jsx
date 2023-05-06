@@ -12,10 +12,16 @@ export const TicTacToe = () => {
 export const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
+  const handleClick = (i) => {
+    const nextSquares = squares.slice()
+    nextSquares[i] = 'X'
+    setSquares(nextSquares)
+  }
+
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]} />
+        <Square value={squares[0]} onSquareClick={handleClick} />
         <Square value={squares[1]} />
         <Square value={squares[2]} />
       </div>
@@ -33,10 +39,10 @@ export const Board = () => {
   );
 };
 
-export const Square = ({value}) => {
+export const Square = ({value, onSquareClick}) => {
 
   return (
-    <button className="square">
+    <button className="square" onClick={onSquareClick}>
       {value}
     </button>
   );
