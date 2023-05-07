@@ -1,33 +1,27 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-export const TicTacToe = () => {
+const Square = ({ value, onSquareClick }) => {
   return (
-    <div style={{ marginTop: "1rem" }}>
-      <Board />
-    </div>
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
   );
 };
 
-export const Board = () => {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
-
+const Board = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (i) => {
-    if (squares[i] || calculateWinner(squares)) {
+    if (calculateWinner(squares) || squares[i]) {
       return;
     }
-
     const nextSquares = squares.slice();
-
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
       nextSquares[i] = "O";
     }
-
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   };
 
   const winner = calculateWinner(squares);
@@ -60,11 +54,25 @@ export const Board = () => {
   );
 };
 
-export const Square = ({ value, onSquareClick }) => {
+export const TicTacToe = () => {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  const handlePlay = (nextSquares) => {
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext);
+  };
+
   return (
-    <button className="square" onClick={onSquareClick}>
-      {value}
-    </button>
+    <div className="game" style={{ marginTop: "1rem" }}>
+      <div className="game-board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{}</ol>
+      </div>
+    </div>
   );
 };
 
