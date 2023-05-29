@@ -129,7 +129,7 @@ export default function StickyNavbar() {
           </Button>
         </MobileNav>
       </Navbar>
-      <div className="mx-auto max-w-screen-md py-12">
+      <div className="mx-auto max-w-screen-md py-12 px-5 lg:px-0">
         <Card className="mb-12 overflow-hidden">
           <img
             alt="nature"
