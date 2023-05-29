@@ -1,4 +1,4 @@
-import { user } from "../constant/data";
+import { user } from "../../constant/data";
 
 const DisplayingData = () => {
   return (

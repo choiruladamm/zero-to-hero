@@ -1,29 +1,13 @@
-import { useState } from "react";
-import DisplayingData from "./components/DisplayingData";
-import RenderingList from "./components/RenderingList";
-import RespondingEvents from "./components/RespondingEvents";
-import UpdateScreen from "./components/UpdateScreen";
-import SharingDataComponents from "./components/SharingDataComponents";
-import { TicTacToe } from "./components/TicTacToe";
+/* eslint-disable no-unused-vars */
 
+import SimpleNavbar from "./components/material-tailwind/SimpleNavbar";
+import StickyNavbar from "./components/material-tailwind/StickyNavbar";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
 
   return (
     <>
-      <DisplayingData />
-      <RenderingList />
-      <RespondingEvents />
-      <UpdateScreen />
-      <UpdateScreen />
-      <SharingDataComponents count={count} hancleClick={handleClick} />
-      <SharingDataComponents count={count} hancleClick={handleClick} />
-      <TicTacToe />
+      <StickyNavbar />
     </>
   );
 };
