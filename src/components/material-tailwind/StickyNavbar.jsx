@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import React from "react";
 import {
   Navbar,
@@ -19,7 +21,7 @@ export default function StickyNavbar() {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
@@ -65,7 +67,7 @@ export default function StickyNavbar() {
 
   return (
     <>
-      <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky inset-0 z-10 max-w-full px-4 py-2 rounded-none h-max lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -75,7 +77,7 @@ export default function StickyNavbar() {
             Material Tailwind
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="hidden mr-4 lg:block">{navList}</div>
             <Button
               variant="gradient"
               size="sm"
@@ -85,7 +87,7 @@ export default function StickyNavbar() {
             </Button>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="w-6 h-6 ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -93,7 +95,7 @@ export default function StickyNavbar() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  className="h-6 w-6"
+                  className="w-6 h-6"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
@@ -107,7 +109,7 @@ export default function StickyNavbar() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={2}
@@ -129,7 +131,7 @@ export default function StickyNavbar() {
           </Button>
         </MobileNav>
       </Navbar>
-      <div className="mx-auto max-w-screen-md py-12 px-5 lg:px-0">
+      {/* <div className="max-w-screen-md px-5 py-12 mx-auto lg:px-0">
         <Card className="mb-12 overflow-hidden">
           <img
             alt="nature"
@@ -155,7 +157,7 @@ export default function StickyNavbar() {
           to be a chunk of change. There are more projects lined up charge extra
           the next time.
         </Typography>
-      </div>
+      </div> */}
     </>
   );
 }
