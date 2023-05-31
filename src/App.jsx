@@ -9,7 +9,7 @@ import Ternary from "./components/roadmapsh/components/Ternary";
 const App = () => {
   return (
     <>
-      <Ternary />
+      
     </>
   );
 };
