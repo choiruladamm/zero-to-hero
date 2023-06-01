@@ -15,7 +15,7 @@ class ButtonClass extends React.Component {
 export const Button = ({ title, bgColor }) => {
   return (
     <div
-      className={`py-3 text-white ${bgColor} cursor-pointer rounded-lg px-7 `}
+      className={`py-3 text-white bg-${bgColor}-700 cursor-pointer rounded-lg px-7 `}
     >
       {title}
     </div>
@@ -26,7 +26,7 @@ export default function ComponentsProps() {
   return (
     <div className="flex gap-3">
       <ButtonClass />
-      <Button title="Button 1" bgColor="bg-red-900" />
+      <Button title="Button 1" bgColor="yellow" />
     </div>
   );
 }
