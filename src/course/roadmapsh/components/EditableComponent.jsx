@@ -2,14 +2,14 @@
 
 import { Button, Input } from "@material-tailwind/react";
 import React, { useState } from "react";
+import useToogle from "./hooks/useToogle";
 
 const EditableComponent = () => {
-  const [editable, setEditable] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  // const [editable, setEditable] = useState(false);
 
-  const toogleEditable = () => {
-    setEditable((prevEditable) => !prevEditable);
-  };
+  const {status:editable, toogleStatus:toogleEditable} = useToogle()
+
+  const [inputValue, setInputValue] = useState("Title");
 
   return (
     <div>

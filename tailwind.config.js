@@ -8,6 +8,6 @@ module.exports = withMT({
     extend: {},
   },
   plugins: [
-    require('daisyui')
+    require('daisyui'),
   ],
 });
