@@ -1,30 +1,30 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { Button } from "@material-tailwind/react";
+import { createContext } from "react";
 import useToogle from "./hooks/useToogle";
+import AccordionContent from "./elements/AccordionContent";
+import AccordionHeader from "./elements/AccordionHeader";
 
-export default function Accordion({ children, header }) {
+export const AccordionContext = createContext();
+const { Provider } = AccordionContext;
+
+const Accordion = ({ children, header }) => {
   const { status: expanded, toogleStatus: toogleExpanded } = useToogle();
 
-  return (
-    <div>
-      <AccordionHeader expanded={expanded} toogleExpanded={toogleExpanded}>
-        {header}
-      </AccordionHeader>
-      <AccordionContent expanded={expanded}>{children}</AccordionContent>
-    </div>
-  );
-}
+  const value = {
+    expanded,
+    toogleExpanded,
+  };
 
-function AccordionHeader({ children, expanded, toogleExpanded }) {
   return (
-    <Button onClick={toogleExpanded}>
-      {children} <span>{expanded ? "-" : "+"}</span>
-    </Button>
+    <Provider value={value}>
+      <div>
+        <AccordionHeader>{header}</AccordionHeader>
+        <AccordionContent>{children}</AccordionContent>
+      </div>
+    </Provider>
   );
-}
+};
 
-function AccordionContent({ children, expanded }) {
-  return <>{expanded && children}</>;
-}
+export default Accordion;
