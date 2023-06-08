@@ -6,7 +6,7 @@ import Welcome from "./elements/Welcome";
 const DestructuringProps = () => {
   return (
     <div>
-      <Welcome>Hello Adam, Calon Software Enginer</Welcome>
+      <Welcome>Hey yo</Welcome>
     </div>
   );
 };
