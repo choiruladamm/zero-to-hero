@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
 
-import DestructuringProps from "./course/roadmapsh/components-docs/passing-props/DestructuringProps";
-import UsersTest from "./course/roadmapsh/components-docs/passing-props/UsersTest";
+import LayoutingBlog from "./course/layout/LayoutingBlog";
+import NavbarSiji from "./course/layout/navbar/NavbarSiji";
+import IconClose from "./course/layout/navbar/icon/IconClose";
 
 const App = () => {
   return (
-    <div className="grid h-screen place-items-center">
-      <UsersTest />
-    </div>
+    <>
+      <NavbarSiji />
+    </>
   );
 };
 
