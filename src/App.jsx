@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 
 import Button from "./components/Button";
-import Accordion from "./course/roadmapsh/components-docs/Accordion";
+import RenderingList from "./course/roadmapsh/rendering-docs/list-keys/RenderingList";
 
 const App = () => {
   return (
     <div className="grid h-screen place-items-center">
-      <Button>Submit</Button>
+      <RenderingList />
     </div>
   );
 };
