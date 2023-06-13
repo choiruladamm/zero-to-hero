@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
 
-import LayoutingBlog from "./course/layout/LayoutingBlog";
-import HeroSiji from "./course/layout/hero-section/HeroSiji";
-import NavbarSiji from "./course/layout/navbar/NavbarSiji";
-import IconClose from "./course/layout/navbar/icon/IconClose";
+import Accordion from "./course/roadmapsh/components-docs/Accordion";
 
 const App = () => {
   return (
     <>
-      <NavbarSiji />
-      <HeroSiji />
+      <Accordion header='Accordion 1'>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda obcaecati ducimus odio, ab labore nihil quisquam quam nisi aliquam nobis.</div>
+      </Accordion>
     </>
   );
 };
