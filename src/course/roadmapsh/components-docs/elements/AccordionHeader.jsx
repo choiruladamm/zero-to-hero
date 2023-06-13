@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { AccordionContext } from "../Accordion";
-import { Button } from "@material-tailwind/react";
+import Button from "../../../../components/Button";
 
 const AccordionHeader = ({ children }) => {
   const { expanded, toogleExpanded } = useContext(AccordionContext);
