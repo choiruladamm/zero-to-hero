@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 
-import Button from "./components/Button";
-import RenderingList from "./course/roadmapsh/rendering-docs/list-keys/RenderingList";
+import ThinkingInReact from "./course/documentation/ThinkingInReact";
+import NewWayFetchData from "./course/explore/NewWayFetchData";
 
 const App = () => {
   return (
     <div className="grid h-screen place-items-center">
-      <RenderingList />
+      <NewWayFetchData />
     </div>
   );
 };
