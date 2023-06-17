@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { dataGallery, getImageUrl } from "./utils";
+import { dataGallery } from "./utils";
 
 export default function ChallengePropsOne() {
   return (
@@ -12,7 +12,7 @@ export default function ChallengePropsOne() {
   );
 }
 
-function GallerySection({ imageId }) {
+function GallerySection() {
   return (
     <>
       {dataGallery.map((data) => (
@@ -20,7 +20,7 @@ function GallerySection({ imageId }) {
           key={data.id}
           className="border p-5 rounded-xl border-slate-700 my-5"
         >
-          <h1>{data.nama}</h1>
+          <h1 className="font-bold text-xl">{data.nama}</h1>
           <img
             className="rounded-full"
             src={data.image}
@@ -43,17 +43,5 @@ function GallerySection({ imageId }) {
         </section>
       ))}
     </>
-  );
-}
-
-function Profile({ src, width, height, alt }) {
-  return (
-    <img
-      className="rounded-full"
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-    />
   );
 }
