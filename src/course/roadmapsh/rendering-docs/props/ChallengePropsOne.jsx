@@ -21,7 +21,13 @@ function GallerySection({ imageId }) {
           className="border p-5 rounded-xl border-slate-700 my-5"
         >
           <h1>{data.nama}</h1>
-          <Profile src={data.image} alt={data.nama} width={70} height={70} />
+          <img
+            className="rounded-full"
+            src={data.image}
+            alt={data.nama}
+            width={70}
+            height={70}
+          />
           <ul>
             <li>
               <b>Profesi: </b> {data.profesi}
