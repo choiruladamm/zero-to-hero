@@ -17,8 +17,12 @@ function LogButtonClicks() {
   };
 
   const handleState = () => {
-    setCount(count + 1);
-    console.log(`useState Clicked ${count} times`);
+    const updateCount = count + 1
+    console.log(`useState Clicked ${updateCount} times`);
+    setCount(updateCount);
+    // const updatedCount = count + 1;
+    // console.log(`Clicked ${updatedCount} times`);
+    // setCount(updatedCount);
   };
 
   console.log("I Rendered");
