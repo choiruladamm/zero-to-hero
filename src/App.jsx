@@ -1,14 +1,12 @@
 /* eslint-disable no-unused-vars */
 
-import ThinkingInReact from "./course/documentation/ThinkingInReact";
-import NewWayFetchData from "./course/explore/NewWayFetchData";
-import ChallengePropsOne from "./course/roadmapsh/rendering-docs/props/ChallengePropsOne";
-import PassingProps from "./course/roadmapsh/rendering-docs/props/PassingProps";
+import LearnUseRefs from "./course/roadmapsh/rendering-docs/refs/LearnUseRefs";
+
 
 const App = () => {
   return (
     <div className="grid h-screen place-items-center">
-      <ChallengePropsOne />
+      <LearnUseRefs />
     </div>
   );
 };
