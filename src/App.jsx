@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-const App = () => {
-  return (
-    <div className="grid h-screen place-items-center">
-      
-    </div>
-  );
-};
+import ButtonMerge from "./course/explore/ButtonMerge";
 
-export default App;
+export default function App() {
+  return (
+    <div className="grid place-items-center h-screen">
+      <ButtonMerge className="px-5 py-2 rounded-full">Hey yo</ButtonMerge>
+    </div>
+  )
+}
+
+
