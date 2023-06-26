@@ -7,7 +7,18 @@ const NavbarTwo = () => {
     idx: null,
   });
 
-
+  // Replace # paths with your paths
+  const navigation = [
+    {
+      title: "Features",
+      path: "#",
+      isDrapdown: true,
+      navs: dropdownNavs,
+    },
+    { title: "Integrations", path: "#", isDrapdown: false },
+    { title: "Customers", path: "#", isDrapdown: false },
+    { title: "Pricing", path: "#", isDrapdown: false },
+  ];
 
   useEffect(() => {
     document.onclick = (e) => {
