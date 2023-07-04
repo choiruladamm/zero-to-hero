@@ -52,7 +52,7 @@ const Form = () => {
         />
         <button
           disabled={answer.length === 0 || status === "submitting"}
-          className="block mt-4 bg-slate-900 text-white text-sm px-3 py-1 rounded-sm"
+          className="block mt-4 bg-slate-900 text-white text-sm px-3 py-1 rounded-md"
         >
           Submit
         </button>
