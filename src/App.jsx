@@ -1,14 +1,13 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import ButtonMerge from "./course/explore/ButtonMerge";
-import CardContent from "./course/layout/card-content/CardContent";
-import NavbarTwo from "./course/layout/navbar-two/NavbarTwo";
+import LearnUseState from "./course/roadmapsh/hooks/basic-hooks/LearnUseState";
 
-export default function App() {
+const App = () => {
   return (
     <>
-     <NavbarTwo />
+     <LearnUseState />
     </>
   );
 }
