@@ -6,16 +6,15 @@ import Label from "./Label";
 const StrukturState = () => {
   const [firstName, setFirstName] = useState("");
   const [lastname, setLastname] = useState("");
-  const [fullName, setFullName] = useState();
+
+  const fullName = firstName + " " + lastname;
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
-    setFullName(e.target.value + " " + lastname);
   };
 
   const handleLastNameChange = (e) => {
     setLastname(e.target.value);
-    setFullName(firstName + " " + e.target.value);
   };
 
   return (
